@@ -1,42 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My Homepage</title>
-</head>
-<body>
-<h2>My Homepage</h2>
-<p>
-    <img src="image/programmer.png" width="100" height="100" alt="프로그래머 그림"/>
-    <strong>컴퓨터 프로그래머</strong>를 꿈꾸며 열심히 공부하고 있는 1인입니다.
-</p>
-<h3>현재 학습하고 있는 과목</h3>
-<ul>
-    <li>C 언어</li>
-    <li>JAVA 언어</li>
-    <li>웹프로그래밍 <a href="http://www.w3c.org" target="_blank">W3C 사이트</a></li>
-</ul>
-<h3>이번 학기 시간표</h3>
-<table border="1">
-    <caption>
-        시간표
-    </caption>
-    <tr>
-        <th>&nbsp;</th>
-        <th>월요일</th>
-        <th>화요일</th>
-        <th>수요일</th>
-    </tr>
-
-    <% for (int i = 1; i <= 7; i++) { %>
-        <tr>
-            <td><%=i%>교시</td>
-            <td>C언어</td>
-            <td>JAVA언어</td>
-            <td>JAVA언어</td>
-        </tr>
-    <%}%>
-</table>
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+	<%
+		String userID=null;
+		if(session.getAttribute("userID") != null){
+			userID=(String)session.getAttribute("userID");
+			%>
+			<h2 align="center">�α��� �Ǿ����ϴ�. </h2>
+			<%
+		}
+		else{
+			%>
+			<h2 align="center">INDEX ���� ������ </h2>
+			<%
+		}
+	%>
+	���� ��¥�� �ð� : <%=new java.util.Date() %>
+	<aside> 
+	<p><a href="https://cbnu.blackboard.com" target="_blank">��ϴ��б� �̷���</a><br>
+	<span id="LogInLink">���� <a href="./login.html"> �α��� â���� ����</a></span> 
+</p></aside>
 </body>
 </html>
