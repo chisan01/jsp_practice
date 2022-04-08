@@ -1,7 +1,6 @@
 <%@page import="java.io.*" %>
 <%@ page import="com.example.jsp_practice.user.UserDAO" %> <!-- userdao의 클래스 가져옴 -->
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="com.example.jsp_practice.user.UserDAO" %>
 <!-- 자바 클래스 사용 -->
 <% request.setCharacterEncoding("UTF-8"); %>
 

@@ -22,9 +22,9 @@
 		}
 	%>
 	현재 날짜와 시간 : <%=new java.util.Date() %>
-	<aside> 
-	<p><a href="https://cbnu.blackboard.com" target="_blank">충북대학교 이러닝</a><br>
-	<span id="LogInLink">유저 <a href="./login.html"> 로그인 창으로 가기</a></span> 
+	<aside>
+	<p><a href="./board.jsp" target="_blank">게시판으로 가기</a><br>
+	<span id="LogInLink">유저 <a href="./login.html"> 로그인 창으로 가기</a></span>
 </p></aside>
 </body>
 </html>
