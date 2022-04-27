@@ -14,10 +14,10 @@ public class UserDAO {
 		try {
 			System.out.println("1");
 			// localhost:3306 ��Ʈ�� ��ǻ�ͼ�ġ�� mysql�ּ�/��Ű��
-			String dbURL = "jdbc:mariadb://localhost:3306/web_programming?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
-			String dbID = "web_programming_user";
+			String dbURL = "jdbc:mysql://localhost:3307/web_programming?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
+			String dbID = "root";
 			String dbPassword = "1234";		// ��й�ȣ�� ���� ������ ���� �����ϴ� ���� ����
-			Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch (Exception e) {
 			System.out.println("2");

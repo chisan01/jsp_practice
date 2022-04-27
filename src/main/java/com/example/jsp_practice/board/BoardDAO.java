@@ -12,10 +12,10 @@ public class BoardDAO {
 	
 	public BoardDAO() {
 		try {
-			String dbURL = "jdbc:mariadb://localhost:3306/web_programming?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
-			String dbID = "web_programming_user";
+			String dbURL = "jdbc:mysql://localhost:3307/web_programming?characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false";
+			String dbID = "root";
 			String dbPassword = "1234";
-			Class.forName("org.mariadb.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch (Exception e) {
 			e.printStackTrace();
